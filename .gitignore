@@ -1,0 +1,40 @@
+# Virtual environment
+yolo_env/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Model weights (too large for GitHub)
+*.pt
+*.onnx
+*.torchscript
+
+# Dataset images and annotations (too large for GitHub)
+data/images/
+data/annotations/
+data/train/
+data/val/
+data/test/
+
+# Results and outputs
+results/predictions/
+results/plots/
+*.jpg
+*.jpeg
+*.png
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
