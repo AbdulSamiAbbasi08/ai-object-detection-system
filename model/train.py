@@ -1,4 +1,9 @@
-results = model.train(
+from ultralytics import YOLO
+
+def main():
+    model = YOLO('yolov8s.pt')
+    
+    results = model.train(
     data='data/dataset.yaml',
     epochs=50,
     imgsz=640,
@@ -15,3 +20,9 @@ results = model.train(
     verbose=True,
     workers=0
 )
+
+    print("Training complete!")
+    print(f"Best weights saved to: model/runs/coco_detection/weights/best.pt")
+
+if __name__ == '__main__':
+    main()
