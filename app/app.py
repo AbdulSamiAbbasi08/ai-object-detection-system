@@ -154,4 +154,4 @@ with gr.Blocks(title="AI Object Detection System") as app:
     gr.Markdown("*CSC411 - Artificial Intelligence | BSIT 6B | Bahria University*")
 
 if __name__ == '__main__':
-    app.launch(share=False)
+    app.launch(share=True, server_name="0.0.0.0")
