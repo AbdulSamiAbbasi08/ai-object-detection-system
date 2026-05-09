@@ -6,16 +6,17 @@ model = YOLO('yolov8s.pt')
 
 # Train the model
 results = model.train(
-    data='data/dataset.yaml',   # our dataset config
-    epochs=50,                   # number of training rounds
-    imgsz=640,                   # image size
-    batch=8,                     # batch size (reduce to 4 if you get memory errors)
-    name='coco_detection',       # run name
-    project='model/runs',        # save location
-    patience=10,                 # stop early if no improvement for 10 epochs
-    save=True,                   # save best weights
-    plots=True,                  # save training plots
-    verbose=True                 # print progress
+    data='data/dataset.yaml',
+    epochs=50,
+    imgsz=640,
+    batch=16,        # increase to 16 since we have GPU
+    device=0,        # 0 = use first GPU
+    name='coco_detection',
+    project='model/runs',
+    patience=10,
+    save=True,
+    plots=True,
+    verbose=True
 )
 
 print("Training complete!")
